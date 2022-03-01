@@ -54,6 +54,11 @@ namespace ForecastApp.Controllers
                 viewModel.Temp = weatherResponse.Main.Temp;
                 viewModel.Weather = weatherResponse.Weather[0].Main;
                 viewModel.Wind = weatherResponse.Wind.Speed;
+                //viewModel.Coordinates.Lat = weatherResponse.Coord.Lat;
+                //viewModel.Coordinates.Lon = weatherResponse.Coord.Lon;
+                viewModel.Coordinates = weatherResponse.Coord;
+                viewModel.Icon = weatherResponse.Weather.FirstOrDefault()?.ImagePath;
+                
             }
             return View(viewModel);
         }

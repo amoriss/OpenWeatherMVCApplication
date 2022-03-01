@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForecastApp.OpenWeatherMapModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -25,5 +26,11 @@ namespace ForecastApp.ForecastAppModels
 
         [Display(Name = "Weather Condition:")]
         public string Weather { get; set; }
+
+        [Display(Name = "Location:")]
+        public Coord Coordinates { get; set; }
+
+        public string Icon { get; set; }
+
     }
 }

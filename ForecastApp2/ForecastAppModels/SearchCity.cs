@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForecastApp.OpenWeatherMapModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace ForecastApp.ForecastAppModels
         [StringLength(20, MinimumLength = 2, ErrorMessage = "Enter a city name greater than 2 and lesser than 20 characters!")]
         [Display(Name = "City Name")]
         public string CityName { get; set; }
+
+     
     }
 }

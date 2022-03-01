@@ -12,5 +12,13 @@ namespace ForecastApp.OpenWeatherMapModels
         public string Description { get; set; }
         public string Icon { get; set; }
 
+        public string ImagePath
+        {
+            get
+            {
+                return $"http://openweathermap.org/img/wn/{Icon}@2x.png";
+            }
+        }
+
     }
 }

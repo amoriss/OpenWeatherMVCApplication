@@ -35,6 +35,19 @@
             <label asp-for="Weather"></label>
             <span class="badge">@Model.Weather</span>
 
+            <label asp-for="Coordinates"></label>
+            <span class="badge">@Model.Coordinates.Lat </span>
+            <br />
+
+            <label asp-for="Coordinates"></label>
+            <span class="badge">@Model.Coordinates.Lon </span>
+            <br />
+
+           
+
+            
+            <img src="@Model.Icon" />
+
         </div>
 
     </div>
@@ -48,6 +61,15 @@
             </form>
 
         </div>
+
+        <iframe width="600"
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                src=$"https://www.google.com/maps/embed/v1/view?&key={GOOGLE_MAPS_APPID}&center=30.2672,97.7431&zoom=12&maptype=satellite">
+        </iframe>
+
 
     </div>
 
